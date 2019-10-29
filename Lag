@@ -1,0 +1,21 @@
+Lage is super useful. You can use this to get the value of the cell immediately prior. Basically, if all of your values 
+are in one column and you need to know the difference between them.
+
+In practice, I've used this to find the difference in the length of times between purchases for customers.
+
+Using dplyr 
+library(tidyverse)
+library(magrittr)
+
+df %<>%
+  group_by(CustomerNumber) %>%
+  mutate(diff = PurchasesDate - lag(PurchasesDate),
+           diff_days = as.numeric(diff, units = 'days'))
+           
+If the DF is huge, you can break it up into several pieces.
+
+df %<>%
+  group_by(CustomerNumber) %>%
+  mutate(lag = lag(PurchasesDate)
+  
+Then you can take the lag column and the DateDiff function to get the difference between the two.
