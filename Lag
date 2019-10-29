@@ -18,4 +18,4 @@ df %<>%
   group_by(CustomerNumber) %>%
   mutate(lag = lag(PurchasesDate)
   
-Then you can take the lag column and the DateDiff function to get the difference between the two.
+Then you can take the lag column and the DiffTime(y,x) function to get the difference between the two.
