@@ -19,3 +19,10 @@ df %<>%
   mutate(lag = lag(PurchasesDate)
   
 Then you can take the lag column and the DiffTime(y,x) function to get the difference between the two.
+
+df %>%
+  mutate(
+  diff = as.numeric(difftime(PurchaseDate2, PurchaseDate1, units = "days"))
+  )
+
+You can probably do both of the previous steps at the same time, but I found it was not going very efficiently.
