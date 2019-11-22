@@ -3,3 +3,5 @@ d_ply(df, .(Variabl),
                               file=paste(sdf$variable[[1]],".csv",sep=""), row.names = FALSE)) 
 by district
 if you change District to Store, it does stores
+
+https://stackoverflow.com/questions/3411429/is-it-possible-to-use-write-table-and-ddply-together 
