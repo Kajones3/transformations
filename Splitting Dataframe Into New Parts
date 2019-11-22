@@ -1,0 +1,5 @@
+d_ply(df, .(Variabl),
+      function(sdf) write.csv(sdf,
+                              file=paste(sdf$variable[[1]],".csv",sep=""), row.names = FALSE)) 
+by district
+if you change District to Store, it does stores
